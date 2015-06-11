@@ -11,9 +11,9 @@
 
 /////// Radio settings ///////
 /////// Radio settings ///////
-#define RADIO_CHANNEL       0x0F
-#define RADIO_PAN_ID        0x2000
-#define RADIO_SRC_ADDR      0x0001
+#define RADIO_CHANNEL       0x0E
+#define RADIO_PAN_ID        0x2100
+#define RADIO_SRC_ADDR      0x2102
 
 
 #define RADIO_TXPQ_MAX_SIZE   10

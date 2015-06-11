@@ -1,13 +1,13 @@
 ''' AP 1/7/15: This old style of shared.py is going to be deprecated soon. '''
 
-DEST_ADDR = '\x00\x01'
+DEST_ADDR = '\x21\x02'
 xb = []
 ser = []
 
 #Xbee serial
-BS_COMPORT = 'COM4'
+BS_COMPORT = 'COM14'
 BS_BAUDRATE = 57600     # Use this setting if your Xbee is set to baud rate of 57600
-#BS_BAUDRATE = 111111   # Use this setting if your Xbee is set to baud rate of 115200
+# BS_BAUDRATE = 111111   # Use this setting if your Xbee is set to baud rate of 115200
 
 motor_gains_set = False
 steering_gains_set = False
