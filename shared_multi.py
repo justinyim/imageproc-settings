@@ -1,6 +1,7 @@
 
 #Xbee settings
-BS_COMPORT = 'COM4'
+BS_COMPORT = '/dev/tty.usbserial-DA01MAM2' # My XBee on MacBook
+#BS_COMPORT = '/dev/tty.usbserial-AD01UBVZ' # Jessica's XBee on MacBook
 BS_BAUDRATE = 57600     # Use this setting if your Xbee is set to baud rate of 57600
 #BS_BAUDRATE = 111111    # Use this setting if your Xbee is set to baud rate of 115200
 

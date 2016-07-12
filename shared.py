@@ -1,11 +1,12 @@
 ''' AP 1/7/15: This old style of shared.py is going to be deprecated soon. '''
 
-DEST_ADDR = '\x00\x01'
+DEST_ADDR = '\x20\x52'#'\x20\x52'
 xb = []
 ser = []
 
 #Xbee serial
-BS_COMPORT = 'COM4'
+BS_COMPORT = '/dev/tty.usbserial-DA01MAM2' # My XBee on MacBook
+#BS_COMPORT = '/dev/tty.usbserial-AD01UBVZ' # Jessica's XBee on MacBook
 BS_BAUDRATE = 57600     # Use this setting if your Xbee is set to baud rate of 57600
 #BS_BAUDRATE = 111111   # Use this setting if your Xbee is set to baud rate of 115200
 
