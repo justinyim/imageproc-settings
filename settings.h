@@ -25,8 +25,8 @@
 #define TELEMPACKFUNC(x) vrTelemGetData(x)
 
 // Encoders Setup
-#define AMS_ENC_OFFSET_0        7649
-#define AMS_ENC_OFFSET_1        7706
+#define AMS_ENC_OFFSET_0        0
+#define AMS_ENC_OFFSET_1        13500
 
 //All the possible encoder settings
 ////// Left legs
