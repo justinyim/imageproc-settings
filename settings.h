@@ -15,7 +15,6 @@
 #define RADIO_PAN_ID        0x2050
 #define RADIO_SRC_ADDR      0x2052
 
-
 #define RADIO_TXPQ_MAX_SIZE   10
 #define RADIO_RXPQ_MAX_SIZE   10
 
@@ -25,8 +24,8 @@
 #define TELEMPACKFUNC(x) vrTelemGetData(x)
 
 // Encoders Setup
-#define AMS_ENC_OFFSET_0        5758
-#define AMS_ENC_OFFSET_1        7706
+#define AMS_ENC_OFFSET_0        0
+#define AMS_ENC_OFFSET_1        13500
 
 //All the possible encoder settings
 ////// Left legs
