@@ -23,9 +23,33 @@
 #define TELEM_INCLUDE "vr_telem.h"
 #define TELEMPACKFUNC(x) vrTelemGetData(x)
 
+#define NAME_SALTO1P1  // Salto configuration
+
 // Encoders Setup
-#define AMS_ENC_OFFSET_0        0
-#define AMS_ENC_OFFSET_1        13500
+#ifdef NAME_SALTO1P1
+
+#define AMS_ENC_OFFSET_0        0 // tail encoder
+#define AMS_ENC_OFFSET_1        21434 // femur encoder
+
+#define BLDC_MOTOR_OFFSET       5000 // motor offset from zero position
+#define BLDC_CALIB              1855 // AMS encoder commutation offset
+
+#define FULL_EXTENSION          13800 // motor radians at full extension
+
+#else //NAME_SALTO1P1
+#define AMS_ENC_OFFSET_0        0 // tail encoder
+#define AMS_ENC_OFFSET_1        10848 // (offset in rad)/(2*pi)*2^14. Must be positive (2^14 - ans if neg.)
+                                //18957//17862//18592//19288//2904//16030 //16019 // femur 9.97 deg from reference
+                                //18592: 2/21, 1928: 2/21, 16019 earliest jumps in Vicon room
+                                //18957: Salto-1P final configuration before breaking
+
+#define BLDC_MOTOR_OFFSET       500
+
+#define FULL_EXTENSION          14500 // motor radians at full extension
+
+//#define BLDC_CALIB             1974
+#endif // NAME_SALTO1P1
+
 
 //All the possible encoder settings
 ////// Left legs
