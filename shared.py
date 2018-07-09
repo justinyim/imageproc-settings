@@ -6,8 +6,8 @@ xb = []
 ser = []
 
 #Xbee serial
-#BS_COMPORT = '/dev/tty.usbserial-DA01MAM2' # My (Justin's) XBee on MacBook
-BS_COMPORT = '/dev/tty.usbserial-A700eYd8' # My (Justin's) backup XBee on MacBook
+BS_COMPORT = '/dev/tty.usbserial-DA01MAM2' # My (Justin's) XBee on MacBook
+#BS_COMPORT = '/dev/tty.usbserial-A700eYd8' # My (Justin's) backup XBee on MacBook
 #BS_COMPORT = '/dev/tty.usbserial-AD01UBK7' # Duncan's XBee on MacBook
 BS_BAUDRATE = 57600     # Use this setting if your Xbee is set to baud rate of 57600
 # BS_BAUDRATE = 111111   # Use this setting if your Xbee is set to baud rate of 115200
