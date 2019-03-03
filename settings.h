@@ -36,10 +36,10 @@
 #define AMS_ENC_OFFSET_1        15792 // femur encoder
 								// pre-regluing: 17445
 
-#define BLDC_MOTOR_OFFSET       4500 // motor offset from zero position
+#define BLDC_MOTOR_OFFSET       450000 // motor offset from zero position [2^16 ticks per rad]
 #define BLDC_CALIB              2583 // recalibrate after magnet dislodged
                                 // 2240 // AMS encoder commutation offset
-#define BLDC_CMD_OFFSET         (1*65536) // leg motor command shift
+#define BLDC_CMD_OFFSET         (1*65536) // leg motor command shift [2^16 ticks per rad]
 
 #define FULL_EXTENSION          12500 // motor radians at full extension
 
@@ -60,11 +60,11 @@
                                 //18592: 2/21, 1928: 2/21, 16019 earliest jumps in Vicon room
                                 //18957: Salto-1P final configuration before breaking
 
-#define BLDC_MOTOR_OFFSET       2500
+#define BLDC_MOTOR_OFFSET       250000 // motor offset from zero position [2^16 ticks per rad]
 #define BLDC_CALIB              1060 // AMS encoder commutation offset
 #define BLDC_CMD_OFFSET         0 // leg motor command shift
 
-#define FULL_EXTENSION          14500 // motor radians at full extension
+#define FULL_EXTENSION          14500 // motor radians at full extension [2^16 ticks per rad]
 
 // Physical parameters
 #define FULL_MASS               25 // 98g, 2^8 ticks/kg
@@ -84,10 +84,10 @@
                                 //17668 // 18101-433 = 17668. femur encoder (offset in rad)/(2*pi)*2^14
 								//18101 (pre 6/25/18) //17921 //19094 // femur encoder
 
-#define BLDC_MOTOR_OFFSET       3500 // motor offset from zero position
+#define BLDC_MOTOR_OFFSET       163840 // motor offset from zero position [2^16 ticks per rad]
 								// 3000 (pre 6/25/18) 
 #define BLDC_CALIB              135//2080 // AMS encoder commutation offset
-#define BLDC_CMD_OFFSET         0 // leg motor command shift
+#define BLDC_CMD_OFFSET         163840 // leg motor command shift [2^16 ticks per rad]
 
 #define FULL_EXTENSION          12400 // motor radians at full extension (for femur)
 
