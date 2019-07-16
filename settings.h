@@ -33,13 +33,15 @@
 #if ROBOT_NAME == SALTO_1P_RUDOLPH // Rudolph
 // Encoder offsets
 #define AMS_ENC_OFFSET_0        0 // tail encoder
-#define AMS_ENC_OFFSET_1        15792 // femur encoder
-								// pre-regluing: 17445
+#define AMS_ENC_OFFSET_1        15906 // femur encoder
+                                        // pre-reguling: 15792 (July 2019)
+					// pre-regluing: 17445
 
-#define BLDC_MOTOR_OFFSET       450000 // motor offset from zero position [2^16 ticks per rad]
-#define BLDC_CALIB              2583 // recalibrate after magnet dislodged
+#define BLDC_MOTOR_OFFSET       0//450000 // motor offset from zero position [2^16 ticks per rad]
+#define BLDC_CALIB              1075 // recalibrated 5/30/19 after magnet dislodged
+                                // 2583 // recalibrated after magnet dislodged
                                 // 2240 // AMS encoder commutation offset
-#define BLDC_CMD_OFFSET         (1*65536) // leg motor command shift [2^16 ticks per rad]
+#define BLDC_CMD_OFFSET         0//(1*65536) // leg motor command shift [2^16 ticks per rad]
 
 #define FULL_EXTENSION          12500 // motor radians at full extension
 
