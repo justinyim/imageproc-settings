@@ -27,7 +27,16 @@
 #define SALTO_1P_RUDOLPH 2
 #define SALTO_1P_DASHER 3
 
-#define ROBOT_NAME SALTO_1P_DASHER // SALTO_1P_RUDOLPH // 
+#define ROBOT_NAME SALTO_1P_RUDOLPH // SALTO_1P_DASHER // 
+
+
+
+#define IY_CG 126   // moment of inertia about CG y axis (1.2E-4 kg m^2)
+#define IX_CG 98    // moment of inertia about CG x axis (9.3E-5 kg m^2)
+#define IZ_CG 58    // moment of inertia about CG z axis (5.5E-5 kg m^2)
+#define IY_MOT 1    // moment of inertia of motor (594E-9 N m^2)
+
+
 
 // Robot-specific parameters (like encoder offsets)
 #if ROBOT_NAME == SALTO_1P_RUDOLPH // Rudolph
@@ -46,12 +55,15 @@
 #define FULL_EXTENSION          12500 // motor radians at full extension
 
 // Physical parameters
-#define FULL_MASS               26 // 103g, 2^8 ticks/kg
-#define LEG_FRICTION            130 // 0.13 Nm/Nm coefficient
-#define SPRING_LINEAR           0.3836493898315605 // Nm/rad
+#define FULL_MASS               34 // 132g (heavy tail & shell) 26 // 103g, 2^8 ticks/kg
+#define LEG_FRICTION            130 // 0.13 Nm/Nm coefficient Tuned by hand in stand_data2.m model(2).f_spring, saved in legFunctionFits.m
+#define SPRING_LINEAR           0.3836493898315605 // Nm/rad See stand_data2.m coeffSpring from fixed car tests, saved in legFunctionFits.m
 #define SPRING_QUADRATIC        0.029279712493158 // Nm/rad^2
 
-//#define FULL_POWER
+#define TAIL_STALL              12 // 0.045 N m in 2^8 ticks/N m
+#define IY_TAIL                 77  // tail moment of inertial (less than 0.064^2*0.018 kg m^2)
+
+#define FULL_POWER
 
 #elif ROBOT_NAME == SALTO_1P_SANTA // Santa
 // Encoder offsets
@@ -74,6 +86,9 @@
 #define SPRING_LINEAR           0.3836493898315605 // Nm/rad
 #define SPRING_QUADRATIC        0.029279712493158 // Nm/rad^2
 
+#define TAIL_STALL              8 // 0.03 N m in 2^8 ticks/N m
+#define IY_TAIL                 36  // tail moment of inertia (less than 0.07^2*0.008 kg m^2)
+
 #define FULL_POWER
 
 #elif ROBOT_NAME == SALTO_1P_DASHER // Dasher
@@ -95,9 +110,12 @@
 
 // Physical parameters
 #define FULL_MASS               28 // 108.0g, 2^8 ticks/kg with shell (previously 105.0g)
-#define LEG_FRICTION            180 // 0.18 Nm/Nm coefficient
-#define SPRING_LINEAR           0.3759274976416161 // Nm/rad
+#define LEG_FRICTION            180 // 0.18 Nm/Nm coefficient Tuned by hand in stand_data2.m model(3).f_spring, saved in legFunctionFits.m
+#define SPRING_LINEAR           0.3759274976416161 // Nm/rad See stand_data2.m coeffSpring from fixed car tests, saved in legFunctionFits.m
 #define SPRING_QUADRATIC        0.04275050419811049 // Nm/rad^2
+
+#define TAIL_STALL              12 // 0.045 N m in 2^8 ticks/N m
+#define IY_TAIL                 34  // tail moment of inertia (less than 0.07^2*0.008 kg m^2)
 
 #define FULL_POWER
 
